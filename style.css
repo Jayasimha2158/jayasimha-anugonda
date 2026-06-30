@@ -883,39 +883,51 @@
             .hero p { max-width: 680px; }
         }
 
+        /* ----- MOBILE FIXES APPLIED HERE ----- */
         @media (max-width: 768px) {
             body { cursor: auto; }
             .focus-cursor-dot, .focus-cursor-ring, .chakra-watermark { display: none; }
+            
             .glass-header {
-                position: sticky;
-                top: 8px;
+                position: fixed; /* Changed from sticky for better mobile behavior */
+                top: 15px;
                 left: 50%;
                 transform: translateX(-50%);
-                flex-wrap: wrap;
-                justify-content: center;
+                flex-wrap: wrap; /* Allows main-nav to drop below */
+                justify-content: space-between; /* Keeps logo left, actions right */
+                align-items: center;
                 border-radius: 18px;
-                gap: 8px;
-                padding: 10px 12px;
+                gap: 10px;
+                padding: 12px 18px;
                 width: min(94vw, 430px);
-                margin: 8px auto 0;
                 z-index: 1000;
             }
-            .logo-crest { margin-bottom: 2px; justify-content: center; width: 100%; gap: 8px; }
-            .brand-block { align-items: center; }
+            
+            .logo-crest { 
+                margin-bottom: 0; 
+                justify-content: flex-start; 
+                width: auto; /* Removed width: 100% to stop it forcing a line break */
+                gap: 8px; 
+            }
+            
+            .brand-block { align-items: flex-start; } /* Keeps brand text aligned left */
             .brand-mark { font-size: 0.95rem; }
+            
             .header-actions {
-                width: 100%;
-                justify-content: center;
+                width: auto; /* Removed width: 100% */
+                justify-content: flex-end;
                 margin-left: 0;
             }
+            
             .mobile-nav-toggle {
                 display: inline-flex;
-                width: 34px;
-                height: 34px;
+                width: 34px; height: 34px;
             }
+            
             .main-nav {
                 display: none;
-                width: min(100%, 280px);
+                width: 100%; /* Dropdown takes full width */
+                order: 3; /* Pushes the menu to the bottom row */
                 flex-direction: column;
                 gap: 8px;
                 padding: 10px 0 4px;
@@ -925,11 +937,13 @@
                 transform: translateY(-8px);
                 transition: opacity 0.25s ease, transform 0.25s ease;
             }
+            
             .main-nav.open {
                 display: flex;
                 opacity: 1;
                 transform: translateY(0);
             }
+            
             .nav-link {
                 font-size: 0.76rem;
                 padding: 8px 10px;
@@ -938,6 +952,7 @@
                 background: rgba(255,255,255,0.035);
                 border: 1px solid rgba(255,255,255,0.06);
             }
+            
             .music-toggle { width: 34px; height: 34px; margin-left: 0; }
             .container { margin-top: 24px; padding: 0 14px; }
             .hero { margin: 20px auto 56px; padding: 28px 18px 24px; }

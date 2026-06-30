@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jayasimha Anugonda | Technologist, Author & Audio Filmer</title>
+    <!-- Modern Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;700&family=Noto+Serif+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- PURE CSS ASHOKA CHAKRA WATERMARK -->
+    <div class="chakra-watermark"></div>
+
+    <!-- BACKGROUND EFFECTS -->
+    <div id="particles-js"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+
+    <audio id="background-audio" loop preload="auto" playsinline>
+        <source src="Bandeya Rey Bandeya [SlowedReverb]  Arijit Singh  Lofi  Revibe.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- HEADER -->
+    <header class="glass-header">
+        <div class="logo-crest" onclick="switchTab('home')">
+            <div class="premium-logo-mark" aria-label="Jayasimha Anugonda logo">
+                <span>J</span>
+                <span>A</span>
+            </div>
+            <div class="brand-block">
+                <span class="brand-mark">Jayasimha</span>
+                <span class="brand-name">Anugonda</span>
+            </div>
+        </div>
+
+        <div class="header-actions">
+            <button id="music-toggle" class="music-toggle" type="button" aria-label="Mute background music" title="Mute background music">
+                <i class="fa-solid fa-volume-high"></i>
+            </button>
+            <button id="mobile-menu-toggle" class="mobile-nav-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <nav class="main-nav" id="mainNav">
+            <button class="nav-link active" onclick="switchTab('home')">Home</button>
+            <button class="nav-link" onclick="switchTab('about')">About Me</button>
+            <button class="nav-link" onclick="switchTab('thoughts')">Thoughts</button>
+            <button class="nav-link" onclick="switchTab('books')">Bookshelf</button>
+            <button class="nav-link" onclick="switchTab('audio')">Audio Films</button>
+            <button class="nav-link contact-btn" onclick="switchTab('contact')">Write to Me</button>
+        </nav>
+    </header>
+
+    <main class="container">
+        
+        <!-- PAGE 1: HOME -->
+        <section id="home" class="tab-content active-tab">
+            
+            <div class="hero hero-cinematic">
+                <div class="hero-quote reveal">
+                    <span class="hero-quote-line telugu-text">शीलं परम भूषणम्</span>
+                </div>
+                <div class="pill reveal">AI/ML ENGINEER • UPSC ASPIRANT • AUTHOR • AUDIO FILMER</div>
+                <h1 class="reveal">The Convergence of <span class="gradient-text">Technology</span>, <span class="gradient-text">Governance</span> & <span class="gradient-text">Storytelling</span>.</h1>
+                <p class="reveal">Welcome. I am Jayasimha Anugonda. Here I document my published literature, my sonic audio films, my thoughts, and the intersections of my journey through the Indian Civil Services</p>
+                <div class="cta-group reveal">
+                    <button class="btn btn-primary" onclick="switchTab('audio')"><i class="fa-solid fa-headphones"></i> Listen to Audio Films</button>
+                    <button class="btn btn-glass" onclick="switchTab('about')"><i class="fa-solid fa-user"></i> My Story</button>
+                </div>
+            </div>
+
+            <!-- HOMEPAGE "ABOUT ME" PREVIEW -->
+            <div class="home-about-preview reveal">
+                <div class="glass-card home-about-grid">
+                    <div class="home-about-image-wrapper">
+                        <img src="2 .jpeg" alt="Jayasimha Anugonda" class="home-profile-img">
+                        <!-- Cinematic Glare Overlay -->
+                        <div class="image-overlay-glare"></div>
+                    </div>
+                    <div class="home-about-text">
+                        <h3>Meet Jayasimha Anugonda</h3>
+                        <p>I am a Computer Science & Engineering graduate specializing in Artificial Intelligence and Machine Learning. Beyond the code, I am a published author, a passionate audio filmer, and a deep thinker.</p>
+                        <p>Having navigated the rigorous depths of the UPSC Civil Services examination across two intense cycles, my perspective is forged at the crossroads of administrative policy, technological architecture, and human emotion.</p>
+                        <button class="btn btn-glass btn-sm mt-15" onclick="switchTab('about')">Read Full Story &rarr;</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FEATURED BOOK BANNER WITH Book_page-0001.jpg -->
+            <div class="featured-banner glass-card reveal">
+                <div class="banner-text">
+                    <span class="pill">PUBLISHED DEBUT WORK</span>
+                    <h2 class="telugu-text">మరో ప్రపంచం (Maro Prapancham)</h2>
+                    <p>"The Silent Resurrection of an Aspirant.. A tale of duality, systemic struggle, and ultimate triumph."</p>
+                    <button class="btn btn-primary btn-sm" onclick="switchTab('books')">View Centerpiece</button>
+                </div>
+                <div class="banner-image-container">
+                    <img src="Book_page-0001.jpg" alt="Maro Prapancham Book Cover" class="banner-book-img">
+                </div>
+            </div>
+
+        </section>
+
+        <!-- PAGE 2: ABOUT (FULL PROFILE) -->
+        <section id="about" class="tab-content">
+            <h2 class="section-title reveal">The Architecture of a Mind</h2>
+            <p class="subtitle reveal">A portrait of the person behind the work — thoughtful, observant, and shaped by purpose.</p>
+
+            <div class="about-cinematic reveal">
+                <div class="about-portrait-card" data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.18">
+                    <div class="about-photo-frame">
+                        <img src="2 .jpeg" alt="Jayasimha Anugonda Portrait">
+                        <div class="about-photo-glow"></div>
+                    </div>
+                    <div class="about-portrait-caption">
+                        <p>“I try to live where clarity, service, and creativity meet.”</p>
+                    </div>
+                </div>
+
+                <div class="glass-card about-story-card">
+                    <div class="about-intro">
+                        <span class="pill">About Me</span>
+                        <h3>Jayasimha Anugonda</h3>
+                        <h4 class="gradient-text">Technologist • Learner • Public Servant • Storyteller</h4>
+                    </div>
+                    <div class="bio-content">
+                        <p>I am a <strong>Computer Science and Engineering graduate</strong> with a strong interest in <strong>Artificial Intelligence and Machine Learning</strong>. I believe technology should serve people with clarity, empathy, and purpose.</p>
+                        <p>My path through <strong>two UPSC examination cycles</strong> shaped my understanding of governance, ethics, and the human realities behind institutions. It also strengthened my sense of responsibility toward society.</p>
+                        <p>Today, I write, create audio films, and reflect on the intersections of technology, public life, and personal growth. My work is rooted in one simple belief: meaningful progress begins with self-awareness.</p>
+                        <p>"We are not defined by the roles we play, but by our courage to resurrect ourselves after every 'zero matches found.' My mission is to bridge the gap between systemic efficiency and human vulnerability, proving that when a common man finds his voice, he can create a world where justice is the only destination."</p>
+                    </div>
+
+                    <div class="about-stats">
+                        <div><strong>AI/ML</strong><span>Purposeful innovation</span></div>
+                        <div><strong>UPSC</strong><span>Policy-minded depth</span></div>
+                        <div><strong>Stories</strong><span>Emotion and insight</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-journey-grid reveal">
+                <div class="glass-card journey-card">
+                    <i class="fa-solid fa-brain"></i>
+                    <h4>My Craft</h4>
+                    <p>I blend technical thinking with human-centered storytelling, whether I am building ideas or shaping narratives.</p>
+                </div>
+                <div class="glass-card journey-card">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                    <h4>My Resolve</h4>
+                    <p>I remain committed to public service, structured thinking, and the pursuit of responsible growth.</p>
+                </div>
+                <div class="glass-card journey-card">
+                    <i class="fa-solid fa-feather-pointed"></i>
+                    <h4>My Voice</h4>
+                    <p>I use words and sound to express the silent struggles, hopes, and questions that often go unheard.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 3: BOOK SHOWCASE -->
+        <section id="books" class="tab-content">
+            <h2 class="section-title reveal">Literary Centerpiece</h2>
+            
+            <div class="book-showcase">
+                <!-- Real Image 3D Tilting Frame with Foil Effect -->
+                <div class="real-book-wrapper reveal" data-tilt data-tilt-max="12" data-tilt-glare="true" data-tilt-max-glare="0.25">
+                    <div class="book-frame foil-effect">
+                        <img src="Book_page-0001.jpg" alt="Maro Prapancham Cover Page" class="centerpiece-img">
+                    </div>
+                </div>
+
+                <div class="glass-card book-info reveal">
+                    <div class="pill">Akshara Samara Publication</div>
+                    <h3 class="telugu-text">మరో ప్రపంచం</h3>
+                    <span class="eng-sub">Maro Prapancham: The Silent Resurrection of an Aspirant..</span>
+                    <p class="synopsis">"Maro Prapancham pulls back the curtain on the grueling UPSC journey, exposing the 'Dark Reality' of a commoner fighting a rusted system. Follow Ram’s climb from the isolation of a 10x10 study room to the pinnacle of AIR 12, as he battles to dismantle the corruption that once humiliated his father. This is an unfiltered manifesto of resilience—proof that when a common man finds his voice, he can rewrite the future."</p>
+                    <div class="cta-group">
+                        <a href="https://www.amazon.in/MARO-PRAPANCHAM-Jayasimha-Anugonda/dp/9357596666" class="btn btn-primary" target="_blank"><i class="fa-solid fa-cart-shopping"></i> Order on Amazon</a>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="subsection-title reveal">Lines from the Book</h3>
+            <div class="quotes-grid reveal">
+                <div class="glass-card mini-quote">"అధికారం అనేది ప్రజలు నీకు ఇచ్చిన అప్పు, దాన్ని న్యాయంతో తీర్చాలి తప్ప అవినీతితో అనుభవించకూడదు."</div>
+                <div class="glass-card mini-quote">"నువ్వు ఓడిపోతే ఈ లోకం నిన్ను ఒక వార్తగా చూస్తుంది, కానీ నువ్వు గెలిస్తే అదే లోకం నిన్ను ఒక వారసుడిగా చూస్తుంది "</div>
+                <div class="glass-card mini-quote">"లోకం నీ ఓటమిని చూసి వెక్కిరిస్తుంది, కానీ నీ విజయం చూసి మోకరిల్లుతుంది నీ హోదా మారగానే, నీ మీద సమాజం చూసే కోణం కూడా మారుతుంది."</div>
+                <div class="glass-card mini-quote">"నీ యూనిఫామ్ నీ స్థాయిని నిర్ణయించవచ్చు, కానీ నీ మేధస్సు నీ సామ్రాజ్య్నాన్ని  నిర్ణయిస్తుంది. నిశ్శబ్దాన్ని ఆయుధంగా మార్చుకున్న వాడికి, అక్షరమే సైన్యం అవుతుంది ."</div>
+            </div>
+        </section>
+
+        <!-- PAGE 4: AUDIO FILMS (EPISODIC LAYOUT) -->
+        <section id="audio" class="tab-content">
+            <h2 class="section-title reveal">Audio Films</h2>
+            <p class="subtitle reveal">
+                Immersive, episodic sonic journeys blending philosophy, intellect, and storytelling. Topics span more than life.
+                <a href="https://www.instagram.com/manalo_mana_mucchata/" class="audio-follow-link" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-instagram"></i>
+                    <span>FOLLOW ON INSTAGRAM</span>
+                </a>
+            </p>
+
+            <div class="audio-films-container reveal">
+                <div class="glass-card audio-episode" data-tilt data-tilt-max="3">
+                    <button class="play-btn" type="button" data-audio="ep1" aria-label="Play episode 1">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+                    <div class="episode-details">
+                        <span class="pill episode-badge">EPISODE 01</span>
+                        <h3>EVARI KOSAM</h3>
+                        <p>EVARI KOSAM PARIGEDTHUNNAV MAWA?.</p>
+                        <div class="fake-waveform">
+                            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                        </div>
+                        <details class="episode-script">
+                            <summary>Read the audio script</summary>
+                            <p>“Arrey mama... okka nimisham aagu...ee gola, ee urukudu koddisepu pakkana pettu. Eppudaina atla challagaa gaddilo kurchoni, gunde meedha cheyyi vesi aalochinchinava? Manam brathukuthunnama... leka evado raasina script-la manam character-lu chesthunnama? Podduna lesthe English la matladali, brand battalu veskovali, standard maintain cheyyali ani gunde meedha bhanda vesi tokkuthunnav. Evari kosam mama? Pakka galli uncle-ka? Leka nuvvu evvado teliyani aa internet followers ka?
+
+Zindagi ante office-la AC kindha kurchoni, laptop mundu keyboard lo nokkadam kaadu mama. Zindagi ante... amma chese thokkudu pachadi la unna aa karam, dhosthula tho kurchoni kotte aa be-fikar muchata, manasuku anipinchindhi mokham meedha cheppe aa dhairyam! Manam matti nundi ochinollam mama... mana basha la oka power untadi, mana slang la oka raw untadi. Adhi vadhilesi, evado polished ga unnadu ani nuvvu fake mask-lu veskunte... addham la neeku nuvve kanipinchakunda pothav.
+
+Ee lokam gatlane untadhi. Nuvvu kasta paduthunte em sadhisthunnav antaru, nuvvu gelisthe luck-u antaru. Prathi okkadu neeku neethulu cheppetoode Kaani nee kadupu la manta, nee kallalo unna kala... evadiki telusu cheppu? mmm? Ee tension-lu, ee burnout lu endhuku osthunnay telusa? Mana originality ni maname champukuntunnam kabatti. Pakkanodni chusi nuvvu race-la parigetthaku.. Vaadi dhaarulu veru, nee dhaarulu veru.
+
+Okkati gurtu pettuko... Paisal unte sir antaru, lekapothe side ki jarigipo antaru. Kaani nee character gatti ga unte, nuvvu zero la unna kuda thopu la ne chustharu. Ee branding-lu, ee show-off-lu e lekkalu tharvatha chuskundham. Mundhu nuvvu manishi ga brathuku. Nee mindset ni, ni character ni gattiga build chey, dora laaga bathakali mama…
+
+Ippudaina ee phone pakkana pettu.. Amma tho rendu muchatlu cheppu, ledante nanna daggara kurcho adi kuda aithaledu ante aa dhosthu gadiki phone kotti 'em ra mama etlunnav?' ani adugu. Adhi ra asal sukkam ante. Ee digital lolli eppatikaina thussu ayyedhe. Chill kotti dil kush ga undu......mm? unta mari... right....
+”</p>
+                        </details>
+                    </div>
+                    <div class="episode-meta">
+                        <span><i class="fa-regular fa-clock"></i> 1:51</span>
+                        <audio id="ep1" class="episode-audio" preload="metadata" controls src="EPISODE 1.mp3"></audio>
+                    </div>
+                </div>
+
+                <div class="glass-card audio-episode" data-tilt data-tilt-max="3">
+                    <button class="play-btn" type="button" data-audio="ep2" aria-label="Play episode 2">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+                    <div class="episode-details">
+                        <span class="pill episode-badge">EPISODE 02</span>
+                        <h3>WHERE ARE YOU</h3>
+                        <p>NI VALUE ENTHA?</p>
+                        <div class="fake-waveform">
+                            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                        </div>
+                        <details class="episode-script">
+                            <summary>Read the audio script</summary>
+                            <p>“Night 2 AM adi...hospital pharmacy counter mundhu nilchunna. Chuttu andharu unnaru kaani, evari kastaalu vaallavi. Naa chethilo oka prescription paper undhi. Lopala bed meeda na friend unnadu... he is fighting for every breath. doctor chala calm ga oka mata cheppadu... Immediate ga Seven Lakhs deposit chesthe surgery start chestham, ledante kastam
+
+Ante ippudu enti? Ippudu vaadi pranam viluva kevalam aa seven lakhs? Aa seven lakhs na daggara lekapothe... vaadu naaku eppatiki kanipinchada? Nijamgana? 10 years friendship, memu share chesukunna thousands of memories... ivanni aa computer screen meedha kanipinche amount mundhu value lekunda poyaya? chinnappudu ma nanna cheppina mata ah kshanam ardam ayindi... ma nanna kurchopttukoni okkate mata padi sarlu cheppevadu... Dabbu untene ikkada manishi lekka chustharu ledante kukkaki unna viluva kuda ivvaru ani... kukka ana road meeda hayiga bathikesthadi
+
+oppukunta dabbu andariki kavali...okariki andhari madhya thala ethukoni brathakadaaniki dabbu kavali.... Inkodiki thana family ni safe ga, eh kastam lekunda chusukoadaniki dabbu kaavali. Inkodiki vaadu pelli cheskunna ammayi mundu nilchoni, Nenu ninnu baga chusukogalanu ani cheppe aa dhairyam kosam dabbu kaavali.. chaduvkodaniki, rent kattadaniki, EMI kattadaniki ila prathi daniki dabbu kavali... andhariki priorities unnayi. I accept it.. dabbu lekapothe... nee lopala em unna entha unna chachipoina shavam tho campare chesthadi society
+
+Kaani nijamga nuvvu eppudu chachipothavo telusa? Neeku kavalsina manishi bed meedha oopiri kosam poraduthu unnappudu... nuvvu pakkane unna kuda, kevalam bank balance leka vaadini kapadukolekapothunna ani realization vachinappudu nuvu nijanga chachipothav.... Ah ICU bayata helpless ga ninchunnappudu... lopala chachipoye vaaditho paatu nuvvu kuda chachipothavu.. alanti oka roju ochinappudu nijanga chachipothav…
+
+So, ippudu cheppu... neeku dabbu enduku kaavali? Thini thiragadanika? Evariko nee range chupinchadanika? Nuvu preminche vallu pranam tho poraduthu unnappudu... vaallani bathikinchukodaniki kaavali dabbu neeku. Am I right? Adhi naku aa roju chala gatti ga ardham ayyindhi. Everything has a price tag... even your loyalty and your love.
+
+Kaani aa roju vaadu thirigi raledhu. Aa roju vaadi prananiki prapancham kattina value... Seven Lakhs... We lost him for a number.....na daggara adhe dabbu unte eeroju e video ila mi daggariki ochedi kaadu. ... Manam kaadhanna reality idhe
+
+Intha vinna neeku... ippudu na daggara okkate question undhi... Nee family ki nuvvu entha varaku security ivvagalav? Repu hospital lo bill chusi nuvvu Helpless ga edche stage lo unnava... leka gatti ga nilabadi fight chese stage lo unnava? Okkasari aalochinchu... okavela nee manusu ki teda anipisthe....
+ 
+                                 you are in wrong place...”</p>
+                        </details>
+                    </div>
+                    <div class="episode-meta">
+                        <span><i class="fa-regular fa-clock"></i> 2:29</span>
+                        <audio id="ep2" class="episode-audio" preload="metadata" controls src="EPISODE 2.mp3"></audio>
+                    </div>
+                </div>
+
+                <div class="glass-card audio-episode" data-tilt data-tilt-max="3">
+                    <button class="play-btn" type="button" data-audio="ep3" aria-label="Play episode 3">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+                    <div class="episode-details">
+                        <span class="pill episode-badge">EPISODE 03</span>
+                        <h3>WAY TO EXIT</h3>
+                        <p>LAST KI NUVU CHEREDI EKKADIKI?</p>
+                        <div class="fake-waveform">
+                            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                        </div>
+                        <details class="episode-script">
+                            <summary>Read the audio script</summary>
+                            <p>“Manikarnika Ghat... Varanasi....
+
+Roju poddhunne levagane manam edho sadhincheyalani phone-lu pattukuni parugeduthaam kadha... Okkasari kallu musukuni ee place ni oohinchuko... Akkada gallo eppudu oka rakamaina kalina vaasana, bhoodidha thiruguthoone untayi.
+Janalu edhusthoo untaru, inkondharu nishshabdhanga chusthoo untaru. Kaani akkada kalipoye aa chithi mantalu untai kada avi evariki longavu…
+
+Nuvvu bathikunnappudu entha great ani feel ayina, nee bank account lo entha balance unna,a society lo neeku entha power unna... Ivevi aa mantalaki avasaram ledhu....Nuvvu car lo vachina, naduchukuntu vachina... chivariki ochesariki aa pogalo andhari asthithvalu okela kalisipothayi…
+
+Asalu manam daily life lo entha cheap gaa bathukuthunnam ante Inkokadi kante
+oka rupayi ekkuva sampadhinchalani, pakkanodi kante oka mettu paina nilabadalani... Manaku unna prashanthathani maname chethulara narikeskuntam.... Evado edho annadani rojulu, nelalu tharabadi lopala pagalu, dveshaalu penchesukuni kullipothunnam...
+Kaani reality entante... Nuvvu thechukunna branded batthalu gaani, nuvvu day and night kashtapadi konna luxury vasthuvulu gaani... Nee body lonchi oopiri poyaka neetho paatu okka inch kuda mundhuku raavu... Ninnu saganampadaniki vache aa naluguru kuda... Inkentha sepu paduthundhi? ani time chusukune valle.
+
+Nuvvu chanipoyaka... Maha ayithe oka vaaram, padhi roojulu gurthunchukoni edhustharu... Aa tharavatha kaneesam nee photo ki dandam pettadaniki kuda evariki time undadhu...Idhee nee value!
+
+Nuvvu ee position lo unna, nee venakala entha pedda background unna sare... Aakhariki manam cheralsina destination aa smashaname... Mana scene motham end ayyedhi aa kattela madhyane. Mana kalla mundhu kalipoye prathi shavam... Manaku cheppe oke okka nijam ento thelusa? 'Repu nee number kuda rabothundhi ani!
+
+anduke....Mana chuttu unna prapancham manalni marchipoyelope... Mana lopala unna kopam, badha, dwesham, asuya ahamkaaram,adhikaram anni champesi Unna konni rojulu pakkanodiki veelainantha manchi chesthu, manalni preminche valla tho peaceful gaa bathakadam kante pedda success ee bhoomi meedha inkoti ledhu.....
+
+Just think about it”</p>
+                        </details>
+                    </div>
+                    <div class="episode-meta">
+                        <span><i class="fa-regular fa-clock"></i> 2:05</span>
+                        <audio id="ep3" class="episode-audio" preload="metadata" controls src="EPISODE 3.mp3"></audio>
+                    </div>
+                </div>
+
+                <div class="glass-card audio-episode" data-tilt data-tilt-max="3">
+                    <button class="play-btn" type="button" data-audio="special-episode" aria-label="Play special episode">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+                    <div class="episode-details">
+                        <span class="pill episode-badge">SPECIAL EPISODE</span>
+                        <h3>THE SILENT EMPEROR</h3>
+                        <p>PRATHI NANNA KI ANKITHAM</p>
+                        <div class="fake-waveform">
+                            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                        </div>
+                        <details class="episode-script">
+                            <summary>Read the audio script</summary>
+                            <p>“Sarigga gamanisthe... intlo andari birthday laki kottha battalu vasthayi. Kaani, pandagaina, pabbamina... aa manishi onti meedha mathram ave paatha battalu kanipisthayi.
+Bayata enda danchikoduthunna, varsham kurusthunna... thanu alasipoyanu ani aagina roju antu ledhu. manam adigina ventane mana chethilo dabbulu pettadaaniki... thanu venakala entha appu cheshado, enni ibbandhulu paddado ah manishi eppudu cheppadu. Thana kasthanni kanneellala bayataku ranivvadu.
+
+Amma laaga muddhulu pettadu... baadha vasthe gundelaku hatthukuni yedavadhu. Eppudu calm ga, kaastha gambheerangane untadu. manalni thidathadu....... Andhukenemo, chaala mandhi nannani just oka normal middle class manishi anukuntaru. Aayana venakala unna thyaaganni chaala simple ga theesestharu…
+
+Kaani aa lopala unnadhi saadha seedha manishi kaadhu... Ee kutumbam ane saamraajyaaniki prathi naanna oka SILENT EMPEROR!
+
+elaanti kasthalu ochina... avanni aa manishi dhaatukuni mana dhaaka raavali. Manalni thaakaalante modhata aa kondani dheekottaali! Aa gundeni dhaati ye okka baadha kooda intloki adugu pettaledhu. Onti ninda baadhyathalu unna, navvuthu samsaraanni mose ah manishi gurinchi entha cheppina takkuve
+
+Lokamlo herolo andaru cinemallone untaru anedi chala pedda abadham..ye costumes lekunda...ye publicity lekunda... just mana santhosham kosam roju narakam choose real life king.... Nanna.....
+
+Pillalu gelichinappudu venaka nilabadi garvanga navve aa navvu chaalu... Vaallu odipoyinappudu 'Nenu unna' ani bhujaanni thatte aa okka cheyyi chaalu... Ee prapanchaanni aina gelicheyochu.Kaalam maarina, ee lokam maarina... Prathi okkari life lo fist hero, last hero eppatiki Nanne…
+
+HAPPY FATHER'S DAY TO ALL THE REAL HEROES OUT THERE!”</p>
+                        </details>
+                    </div>
+                    <div class="episode-meta">
+                        <span><i class="fa-regular fa-clock"></i> 1:55</span>
+                        <audio id="special-episode" class="episode-audio" preload="metadata" controls src="SPECIAL EPISODE.mp3"></audio>
+                    </div>
+                </div>
+
+                <div class="glass-card audio-episode" data-tilt data-tilt-max="3">
+                    <button class="play-btn" type="button" data-audio="ep4" aria-label="Play episode 4">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+                    <div class="episode-details">
+                        <span class="pill episode-badge">EPISODE 04</span>
+                        <h3>16 YELLA ROUDRUDU</h3>
+                        <p>ABHIMANYU....</p>
+                        <div class="fake-waveform">
+                            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                        </div>
+                        <details class="episode-script">
+                            <summary>Read the audio script</summary>
+                            <p>“Kurukshetram... Padmavyuham!
+Dronacharyudu geesina marana shaasanam.
+Pandava sainyam dikkuthochaka nilabadindi. ..Endukante... Lopaliki velladam thelisina Arjunudu akkada ledu.
+Sarigga appude... Ratham digaadu oka 16 yella kurradu.
+
+Aagadaaniki akkada Arjunudu ledu ani sambarappaddaru...
+Kaani lopaliki adugu pettindi Gaandeevi raktham!
+Eduruga unnadi Bheeshmuda, Dronuda, Karnuda... Evaraithe enti?
+Akkada nilabaddadi kevalam oka 16 yella kurradu kaadu... Aa vyuhaanni mukkalu cheyadaaniki vachina saakshaatru mrutyuvu!
+
+Athaniki vyuhamloki velladame thelusu, bayataki raavadam theliyadu ani navvina shathruvula nollu moothapade samayam aasannamaindi..
+Endukante, bayataki ela raavaalo aalochinche balaheenatha aa rakthamlone ledu...Lopaliki vellaaka okka shathruvuni kuda praanaalatho vadalani roudram maathrame aa veerudiki thelusu!
+
+Ontipai kavacham cheelipoyindi... Shareeram nunchi raktham nadulla pravalisthondi. Aina aa simhapu pilla venakki thaggaledu.
+Chethilo aayudham lekapothe enti?
+Kulipoyina ratham chakraanne kaalachakram la thippi shathruvula gundello vanuku puttinchadu!
+
+Aa okka 16 yella kurraadini aapaleka... Chivaraku eduguru mahaarathulu kalisi adharmanga katthulu dooshaaru..Adi Kouravula gelupu anukunnaru kani ah baaludini choosi yaavath saamrajyaaniki puttina marana bhayam!
+
+Praarambhamlo... Vyuham bayata Paandava sainyam dikkuthochaka nilabadithe... Mugimpulo... Aa vyuham lopala okkadai nilichina Abhimanyudi vishwaroopaaniki, Kourava sainyame dikkulu theliyani shavala kuppaga maaripoyindi!
+
+Charithralo gelichinodi kathalu chaala mandi raasthaaru...
+Kaani odipoyi kuda... Gelichinodi simhaasanaanni shaasinchina ekaika peru:                                                          Abhimanyu!
+
+Avunu... Aa roju aa vyuhamlo Abhimanyudini champesaru!
+Kaani... Shareeraanni maathrame virichaaru, athani paraakramaanni kaadu!
+Aayudhaanni maathrame laakkunnaaru, athani amarathvaanni kaadu!
+
+Padmavyuham ane marana shaasanaanni thana raktham chetha thigarasi...
+16 yella vayasulone mrutyuvuke paraakramam nerpina aa simhapu pilla...
+Nelakorigina amarude... Shathaabdaalu daathina veerude!
+
+ABHIMANYU...”</p>
+                        </details>
+                    </div>
+                    <div class="episode-meta">
+                        <span><i class="fa-regular fa-clock"></i> 2:47</span>
+                        <audio id="ep4" class="episode-audio" preload="metadata" controls src="ABHIMANYU EPISODE.mp3"></audio>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 5: THOUGHTS -->
+        <section id="thoughts" class="tab-content">
+            <h2 class="section-title reveal">Thoughts</h2>
+            <p class="subtitle reveal">A collection of thoughts on everything that matters. From the chaos of the race to the clarity of the destination—a space for the things that make us human.</p>
+
+            <div class="thoughts-grid reveal">
+                <article class="glass-card thought-card" data-thought-title="ETU NI PAYANAM?" data-thought-preview="We grow up believing running is survival, but stopping may be wisdom." data-thought-full="We grow up in households where &quot;running&quot; is the only language we are taught. As children, we watch our parents. We see our father waking up before the sun, his slippers slapping against the floor, disappearing into the dark to secure a future we don't yet understand. We see our mother stretching every rupee, managing the chaos of a middle-class home with the precision of a soldier, her dreams often sacrificed on the altar of our school fees and tuition classes. In that environment, life is defined by a simple, terrifying equation: running equals survival. And so, we grow up carrying that baton. We become young adults who believe that if we aren’t exhausted, we aren't working hard enough. We look at our bank accounts, our job titles, and our exam results as the only proof that we exist. We think that money is the finish line. We think that if we just run a little faster, get that promotion, clear that goal, or hit that target, we will finally be safe. But safety is a moving target. I have walked those roads. I have spent years in the UPSC crucible, where you lose touch with the sun, the seasons, and sometimes, with yourself. You are running for a position that promises power, but all you find is a room filled with notes and a heart filled with anxiety. And the worst part? You are running alongside millions of others, all of you blurred into a grey mass, all of you terrified that if you stop for one second, someone else will take your place. There is a profound truth that we often miss in the heat of the race: if you run blindly, you don't find a destination; you only find fatigue. Just think about it. If you don't know what you are chasing, you aren't a runner, you are a prisoner of your own motion. In Telugu, we often say: 'Parigedithe parugu thappa em radu.' It’s a bitter truth. You can run until your lungs burn, but if you don't know the value of what you are running toward, the finish line will always keep moving. 'Knowing what you want' is not just about a career goal, it is about the soul. When you sit down and finally ask, 'Why am I doing this?' and you realize the answer isn't 'because I have to,' but 'because I want to,' everything changes. Once you identify what truly matters, whether it is the quiet dignity of your parents, the impact of your code, or the truth in your writing, you suddenly gain the power of navigation. When you know what you want, you finally know how far you need to run. And once you know how far you need to run, you gain the most divine power of all: the wisdom to know exactly where to stop. Why is stopping so important? Because it is only when you stop that you can look to your left and your right. When you are sprinting, you treat every person as a competitor. You treat money as a wall you have to build between yourself and the 'risk' of poverty. But when you stop, when you define your own race, you find that you have enough breath left to help someone else. You find that your morals and your helping nature are not distractions from your success; they are the purpose of it. You realize that a life spent in the middle class is not a life of lack, provided you have your ethics intact. A man who earns five thousand rupees and sleeps with a clean conscience is infinitely wealthier than a man who earns five lakhs by stepping on the heads of those who helped him climb. We are not machines designed for 24/7 output. We are human beings designed for connection, for art, for service, and for stillness. So, look at your life today. Are you running because you are chasing a dream, or are you running because you are afraid to stop and see who you have become? Success isn't about being the last one standing at the end of the race. Success is having the courage to step off the track, breathe, look at the sky, and say: 'I have enough. I have done enough. Now, I will live.' Life is not a marathon to be won. It is a garden to be tended. And you cannot tend a garden while you are sprinting past it. Stop. Breathe. Look around. You are not behind. You are exactly where you are meant to be. Now, go find your own finish line.">
+                    <button class="thought-toggle" type="button" aria-expanded="false">
+                        <h3>ETU NI PAYANAM?</h3>
+                        <p class="thought-preview">We grow up believing running is survival, but stopping may be wisdom.</p>
+                        <span class="thought-read-indicator">Open full thought <i class="fa-solid fa-arrow-right"></i></span>
+                    </button>
+                </article>
+
+                <article class="glass-card thought-card" data-thought-title="The Degree Lie" data-thought-preview="We spend fifteen years of our lives memorizing (a+b)^2?" data-thought-full="We spend fifteen years of our lives memorizing (a+b)^2, Pythagoras, and the sine of theta. We are told these are the building blocks of a successful life. Then, we graduate, step into the real world, and realize, none of this helps us handle a bank loan, understand a rental contract, or navigate the bureaucracy of our own country. Middle-class families pour lakhs of rupees into private education, viewing it as a holy investment. They sacrifice comfort, gold, and sleep, hoping that a degree will unlock the gates to a secure life. But for most, that degree is just a hollow badge. We graduate with a certificate, but zero preparation for the reality of earning a living or surviving a crisis. When a student fails to find a job or struggles to succeed, we are quick to point fingers. The student is weak,The student didnt study hard enough. We burn the student at the stake, but we never dare to question the syllabus. The system isnt broken, it is functioning exactly as it was designed, to create obedient workers who stay indebted to the very institutions that fail them. It keeps us busy with irrelevant formulas so we dont have the time to ask why the system produces degree-holders instead of thinkers. You are not the problem. Your intellect is not weak  just because you couldnt find meaning in a textbook written decades ago. Stop treating your worth as a line on a resume. If you feel like your education failed you, take it as your first real lesson: The system is not here to teach you how to live, it is here to teach you how to fit in.If the system wont teach you how to survive, teach yourself. Question everything, learn how money works, learn how to negotiate your worth, and learn how to stand up for yourself. The moment you stop blaming yourself for failing a rigged game is the moment you start actually succeeding. Everything else is just homework. Does this hit the right balance of frustration and empowerment?">
+                    <button class="thought-toggle" type="button" aria-expanded="false">
+                        <h3>The Degree Lie</h3>
+                        <p class="thought-preview">We spend fifteen years of our lives memorizing (a+b)^2?</p>
+                        <span class="thought-read-indicator">Open full thought <i class="fa-solid fa-arrow-right"></i></span>
+                    </button>
+                </article>
+
+                <article class="glass-card thought-card" data-thought-title="O Digital Manishi......" data-thought-preview="If you didn't post it, did it even happen?" data-thought-full="Walk into any cafe in Bangalore, stand on a local train in Mumbai, or sit in a public park in Delhi, and look at the faces. Almost everyone is illuminated by the same ghostly, blue light. We are all connected.. We are part of global networks, we know what a stranger ate for lunch on the other side of the planet, and we feel a strange, manufactured intimacy with people we have never met. But have you noticed the silence? We are living in an era where we have traded presence for notification..  We have turned our lives into a curated gallery for an audience that doesn't really care. We spend our evenings crafting the perfect aesthetic for our social media, desperate to prove that our lives are interesting, successful, and enviable. But there is a hollowness to this... The more we document our lives, the less we actually live them. The tragic truth of our digital age is that we are experiencing life through a lens rather than with our own eyes. We go to a beautiful place, and our first instinct isn't to feel the wind or smell the air, its to capture a photo to show the world we were there. If you didn't post it, did it even happen? That is the question we are terrified to answer. In India, life used to happen in the 'in-between' moments, the conversation you had with the chaiwala, the argument with a stranger on a bus, the silence you shared with your grandfather on the porch. These were the moments that formed the fabric of our culture. These were the moments that made us empathetic. Today, we have killed those moments. We fill every second of waiting at the bus stop, in the elevator, at the dining table with a scrolling thumb. We have become allergic to silence. We are terrified of being alone with our own thoughts because we have forgotten how to have them. We feel connected to thousands, yet we are increasingly unable to speak to the person sitting across the table without checking our phones. We have thousands of friends online, yet if we were in a genuine crisis, how many of them would actually show up? This is the great Indian irony. We come from a culture that valued community above all else, where the door was always open, where the neighbors were an extension of the family. Now, we are building digital walls that are far higher and thicker than any concrete wall ever could be. We are lonely, but we are too busy liking other people's posts to admit it. This isn't an attack on technology, I am a technologist, after all. It is a plea for sanity. The world is not what you see on your feed. The world is the grit, the heat, the laughter of a friend, the frustration of a traffic jam, and the smell of rain on dry Indian soil. That is reality. That is where your life is actually happening. So, here is a challenge : The next time you find yourself with five minutes of waiting, put the phone in your pocket. Don't look for a distraction. Look at the people around you. Observe the way they look, the way they move. Listen to the chaos of the street. Get comfortable with being bored. The moment you stop looking at the world through a screen, you will realize that life wasn't waiting for a like to be validated. It was waiting for you to simply show up and witness it. We are not here to watch life happen on a screen. We are here to be part of the messy, loud, beautiful, and imperfect reality that is happening right in front of us. Put the phone down. The world is waiting.">
+                    <button class="thought-toggle" type="button" aria-expanded="false">
+                        <h3> O Digital Manishi......</h3>
+                        <p class="thought-preview">If you didn't post it, did it even happen?</p>
+                        <span class="thought-read-indicator">Open full thought <i class="fa-solid fa-arrow-right"></i></span>
+                    </button>
+                </article>
+
+            </div>
+
+            <div id="thought-overlay" class="thought-overlay" aria-hidden="true">
+                <div class="thought-overlay-backdrop"></div>
+                <div class="thought-overlay-card" role="dialog" aria-modal="true">
+                    <button class="thought-close" type="button" aria-label="Close thought">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <div class="thought-overlay-content">
+                        <p class="thought-overlay-kicker">A reflection</p>
+                        <h3 id="thought-overlay-title"></h3>
+                        <p id="thought-overlay-body"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 6: CONTACT -->
+        <section id="contact" class="tab-content">
+            <h2 class="section-title reveal">Direct Correspondence</h2>
+            <p class="subtitle reveal">Skip standard data forms. Draft a personal note to my inbox below.</p>
+            <div class="glass-card dispatch-box reveal">
+                <!-- Handled via JS to prevent actual popups -->
+                <form id="dispatchForm" onsubmit="handleFormSubmit(event)">
+                    <input type="hidden" name="access_key" value="6ceb4f7b-94ae-4971-9dad-ea35b6859f43">
+                    <input type="hidden" name="subject" value="New message from Jayasimha portfolio">
+                    <div class="letter-layout">
+                        <p>Dear Jayasimha Anugonda,</p>
+                        <p>
+                            My name is <input type="text" name="name" class="madlib-input" placeholder="[ Your Name ]" required>, 
+                            and I am reaching out from <input type="text" name="city" class="madlib-input short" placeholder="[ City ]">. 
+                            I am writing to you regarding 
+                            <select name="topic" class="madlib-select">
+                                <option>your book "Maro Prapancham"</option>
+                                <option>an upcoming Audio Film</option>
+                                <option>UPSC & Tech perspectives</option>
+                                <option>a web development project</option>
+                                <option>general purpose</option>
+                            </select>.
+                        </p>
+                        <textarea name="message" class="madlib-area" rows="3" placeholder="[ Type your message, questions, or personal story here... ]" required></textarea>
+                        <p>
+                            You can send your reply back to my digital mailbox at 
+                            <input type="email" name="email" class="madlib-input" placeholder="[ Your Email Address ]" required>.
+                        </p>
+                        <p>Warm regards,</p>
+                    </div>
+                    <button type="submit" id="submitBtn" class="btn btn-primary submit-dispatch">Transmit Note <i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- GLOBAL FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Jayasimha Anugonda.</p>
+            <p class="footer-subtext">AI/ML Web Developer | Two-Time UPSC Candidate | Audio Filmer | Author</p>
+            <div class="footer-links">
+                <a href="https://www.amazon.in/MARO-PRAPANCHAM-Jayasimha-Anugonda/dp/9357596666" target="_blank" rel="noopener noreferrer">Amazon</a> • <a href="https://www.linkedin.com/in/jayasimha-anugonda-a47807209/" target="_blank" rel="noopener noreferrer">LinkedIn</a> • <a href="https://www.instagram.com/jayasimha_anugonda/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            </div>
+            <div class="footer-jai-hind reveal">JAI HIND</div>
+        </div>
+    </footer>
+
+    <!-- LEVITATING RADAR WHATSAPP BUTTON -->
+    <a href="https://wa.me/919346317852?text=Hello%20Jayasimha!%20I%20just%20visited%20your%20portfolio." class="whatsapp-levitate" target="_blank" title="Chat on WhatsApp">
+        <div class="sonar-ring"></div>
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>Connect</span>
+    </a>
+
+    <!-- NEW FOCUS LENS CURSOR -->
+    <div class="focus-cursor-dot"></div>
+    <div class="focus-cursor-ring"></div>
+
+    <!-- External Libraries -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

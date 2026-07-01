@@ -1,3 +1,6 @@
+/* --- PREMIUM FONT PAIRING: Lora (Headings/Art) & DM Sans (Tech/UI) --- */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Lora:ital,wght@0,500;0,600;1,500&display=swap');
+
 :root {
     --bg-main: #06090e;
     --text-main: #f8fafc;
@@ -15,7 +18,8 @@
 body {
     background-color: var(--bg-main);
     color: var(--text-main);
-    font-family: 'Plus Jakarta Sans', 'Noto Sans Telugu', sans-serif;
+    font-family: 'DM Sans', 'Noto Sans Telugu', sans-serif;
+    font-weight: 400;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -25,19 +29,11 @@ body {
 }
 
 .telugu-text {
-    font-family: 'Noto Serif Devanagari', 'Plus Jakarta Sans', serif;
+    font-family: 'Noto Serif Devanagari', 'Lora', serif;
     font-weight: 600;
     letter-spacing: 0.02em;
     line-height: 1.75;
     font-size: 1.05em;
-}
-
-.hero-quote-line {
-    display: inline-block;
-    font-size: clamp(1.35rem, 2.3vw, 1.95rem);
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
 /* --- GPU ACCELERATED FOCUS LENS CURSOR --- */
@@ -137,7 +133,20 @@ button:hover ~ .focus-cursor-dot, a:hover ~ .focus-cursor-dot {
 }
 
 /* --- TYPOGRAPHY --- */
-h1, h2, h3, .logo-crest span { font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: var(--text-main); }
+h1, h2, h3, .logo-crest span, .hero-quote-line { 
+    font-family: 'Lora', serif; 
+    font-weight: 600; 
+    color: var(--text-main); 
+}
+
+.hero-quote-line {
+    display: inline-block;
+    font-size: clamp(1.35rem, 2.3vw, 1.95rem);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 .gradient-text { background: linear-gradient(135deg, var(--accent), var(--accent-secondary)); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 .section-title { font-size: 2.6rem; text-align: center; margin-bottom: 2rem; }
 .subtitle { text-align: center; color: var(--text-muted); margin: -1.2rem 0 3rem; font-size: 1.1rem; }
@@ -216,9 +225,9 @@ h1, h2, h3, .logo-crest span { font-family: 'Space Grotesk', sans-serif; font-we
 }
 .premium-logo-mark span {
     position: absolute;
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 1rem;
-    font-weight: 700;
+    font-family: 'Lora', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
     color: #fff;
     letter-spacing: 0.06em;
 }
@@ -322,23 +331,7 @@ h1, h2, h3, .logo-crest span { font-family: 'Space Grotesk', sans-serif; font-we
 }
 .pill { display: inline-block; padding: 6px 16px; border-radius: 20px; background: rgba(56,189,248,0.1); border: 1px solid rgba(56,189,248,0.2); color: var(--accent); font-size: 0.78rem; font-weight: 700; letter-spacing: 1.5px; margin-bottom: 25px; text-transform: uppercase; }
 .hero-quote { margin: 0 0 24px; display: flex; justify-content: center; }
-.hero-quote-line {
-    display: inline-block;
-    position: relative;
-    overflow: hidden;
-    padding: 16px 24px;
-    border-radius: 999px;
-    border: 1px solid rgba(56,189,248,0.35);
-    background: linear-gradient(90deg, rgba(56,189,248,0.16), rgba(15,23,42,0.72), rgba(129,140,248,0.16));
-    font-size: clamp(1.8rem, 3.6vw, 2.8rem);
-    font-weight: 800;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: #fff;
-    text-shadow: 0 0 14px rgba(255,255,255,0.2), 0 0 26px rgba(56,189,248,0.35);
-    box-shadow: 0 0 30px rgba(56,189,248,0.18), inset 0 1px 0 rgba(255,255,255,0.16);
-    animation: heroQuoteGlow 3s ease-in-out infinite alternate;
-}
+
 .hero-quote-line::before {
     content: '';
     position: absolute;
@@ -736,7 +729,8 @@ h1, h2, h3, .logo-crest span { font-family: 'Space Grotesk', sans-serif; font-we
 .letter-layout {
     font-size: 1.15rem;
     line-height: 2.1;
-    font-family: 'Space Grotesk';
+    font-family: 'Lora', serif;
+    font-style: italic;
     position: relative;
     z-index: 1;
 }
@@ -746,7 +740,7 @@ h1, h2, h3, .logo-crest span { font-family: 'Space Grotesk', sans-serif; font-we
     border: none;
     border-bottom: 2px dashed rgba(56,189,248,0.75);
     color: var(--accent);
-    font-family: 'Plus Jakarta Sans';
+    font-family: 'DM Sans', sans-serif;
     font-size: 1rem;
     font-weight: 600;
     padding: 0 8px;
@@ -773,7 +767,7 @@ h1, h2, h3, .logo-crest span { font-family: 'Space Grotesk', sans-serif; font-we
     border-radius: 14px;
     padding: 15px;
     color: var(--text-main);
-    font-family: 'Plus Jakarta Sans';
+    font-family: 'DM Sans', sans-serif;
     resize: vertical;
     outline: none;
     transition: border-color 0.3s, box-shadow 0.3s;
@@ -1008,6 +1002,7 @@ h1, h2, h3, .logo-crest span { font-family: 'Space Grotesk', sans-serif; font-we
     .site-footer { padding: 28px 14px; }
     .footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; }
 }
+
 /* Disable text selection everywhere */
 body {
     -webkit-user-select: none; /* Safari */

@@ -1008,3 +1008,16 @@ h1, h2, h3, .logo-crest span { font-family: 'Space Grotesk', sans-serif; font-we
     .site-footer { padding: 28px 14px; }
     .footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; }
 }
+/* Disable text selection everywhere */
+body {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Standard */
+}
+
+/* EXCEPT for your form inputs, so people can still type messages to you */
+input, textarea, .madlib-input, .madlib-select, .madlib-area {
+    -webkit-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}

@@ -517,5 +517,22 @@ ABHIMANYU...”</p>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
     <script src="script.js"></script>
+
+      <script>
+    // 1. Disable Right-Click (Stops "Save Image As" and context menu)
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+
+    // 2. Disable Keyboard Copy Shortcuts (Ctrl+C / Cmd+C)
+    document.addEventListener('copy', function(e) {
+        e.preventDefault();
+    });
+
+    // 3. Disable Dragging (Stops people from dragging images to their desktop)
+    document.addEventListener('dragstart', function(e) {
+        e.preventDefault();
+    });
+</script>
 </body>
 </html>
